@@ -19,5 +19,5 @@ cd $PBS_O_WORKDIR
 LOGFILE=game_$PROCESSES.txt
 rm $LOGFILE
 echo "N = " $N "Processes = " $PROCESSES >> $LOGFILE
-mpiexec -ppn 1 ./mpi/src/game-of-life $N $threshold $generations $display | grep "GAME" >> $LOGFILE
+mpiexec -ppn 1 ./src/game-of-life $N $threshold $generations $display | grep "GAME" >> $LOGFILE
 
